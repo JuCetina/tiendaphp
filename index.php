@@ -1,172 +1,30 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto&display=swap" rel="stylesheet">
-    <title>Tienda de camisetas</title>
-</head>
-<body>
-    <div class="container">
+<?php
 
-        <!-- Cabecera -->
-        <header class="header">
-            <div class="logo">
-                <a href="index.php">
-                    <img src="img/camiseta.png" alt="Camiseta">
-                    <h1>Tienda de camisetas</h1>
-                </a>
-            </div>
-        </header>
-    
-        <!-- Menú -->
-        <nav class="menu">
-            <ul>
-                
-                <a href="index.php">
-                    <li>
-                        Inicio
-                    </li>
-                </a>
-                <a href="index.php">
-                    <li>
-                        Categoría 1
-                    </li>
-                </a>
-                <a href="index.php">
-                    <li>
-                        Categoría 2
-                    </li>
-                </a>
-                <a href="index.php">
-                    <li>
-                        Categoría 3
-                    </li>
-                </a>
-                <a href="index.php">
-                    <li>
-                        Categoría 4
-                    </li>
-                </a>
+require_once 'autoload.php';
 
-            </ul>
-        </nav>
-    
-        <div class="content">
-            <!-- Barra lateral -->
-            <aside class="sidebar">
-    
-                <!-- Login -->
-                <div id="login" class="block-aside">
-                    <h2>Entrar a la web</h2>
-                    <form action="" method="POST">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email">
-                        <label for="password">Contraseña</label>
-                        <input type="password" name="password">
-                        <input type="submit" value="Entrar">
-                    </form>
-                </div>
-    
-                <!-- Enlaces -->
-                <ul>
-                    <a href="#">
-                        <li><i class="icon-box-add"></i> Mis pedidos</li>
-                    </a>
-        
-                    <a href="#">
-                        <li><i class="icon-pencil2"></i> Gestionar pedidos</li>
-                    </a>
-                
-                    <a href="#">
-                        <li><i class="icon-drawer2"></i> Gestionar categorias</li>
-                    </a>
-                </ul>
-    
-            </aside>
-    
-            <!-- Contenido principal -->
-            <main>
-                <h3>Productos destacados</h3>
-                <hr>
-                <div class="products">
+require_once 'views/layout/header.php';
+require_once 'views/layout/sidebar.php';
 
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>                         
-                    <div class="product">
-                        <img src="img/camiseta.png" alt="Camiseta">
-                        <h4>Camiseta azul</h4>
-                        <p>$30.000</p>
-                        <a class="button" href="#">Comprar</a>
-                    </div>
-                </div>
-    
-            </main>
-        </div>
-        
-        <!-- Footer -->
-        <footer>
-            <p>Desarrollado por Juliette Cetina &copy;<?=date('Y')?></p>
-        </footer>
-    </div>
-</body>
-</html>
+if(isset($_GET['controller'])){
+    $nombre_controlador = $_GET['controller'];
+}else{
+    echo 'La página no existe';
+    exit();
+}
+
+if(class_exists($nombre_controlador)){
+
+    $controlador = new $nombre_controlador;
+
+    if(isset($_GET['action']) && method_exists($controlador, $_GET['action'])){
+        $action = $_GET['action'];
+        $controlador->$action();
+    }else{
+        echo 'La página no existe';
+    }
+}else{
+    echo 'La página no existe';
+}
+
+
+require_once 'views/layout/footer.php';
