@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto&display=swap" rel="stylesheet">
     <title>Tienda de camisetas</title>
 </head>
 <body>
@@ -58,7 +59,7 @@
     
                 <!-- Login -->
                 <div id="login" class="block-aside">
-                    <h3>Entrar a la web</h3>
+                    <h2>Entrar a la web</h2>
                     <form action="" method="POST">
                         <label for="email">E-mail</label>
                         <input type="email" name="email">
@@ -86,40 +87,80 @@
             </aside>
     
             <!-- Contenido principal -->
-            <div class="central">
+            <main>
+                <h3>Productos destacados</h3>
+                <hr>
+                <div class="products">
+
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>                         
+                    <div class="product">
+                        <img src="img/camiseta.png" alt="Camiseta">
+                        <h4>Camiseta azul</h4>
+                        <p>$30.000</p>
+                        <a class="button" href="#">Comprar</a>
+                    </div>
+                </div>
     
-                <div class="product">
-                    <img src="img/camiseta.png" alt="Camiseta">
-                    <h2>Camiseta azul</h2>
-                    <p>$30.000</p>
-                    <a href="#">Comprar</a>
-                </div>
-                <div class="product">
-                    <img src="img/camiseta.png" alt="Camiseta">
-                    <h2>Camiseta azul</h2>
-                    <p>$30.000</p>
-                    <a href="#">Comprar</a>
-                </div>
-                <div class="product">
-                    <img src="img/camiseta.png" alt="Camiseta">
-                    <h2>Camiseta azul</h2>
-                    <p>$30.000</p>
-                    <a href="#">Comprar</a>
-                </div>
-                <div class="product">
-                    <img src="img/camiseta.png" alt="Camiseta">
-                    <h2>Camiseta azul</h2>
-                    <p>$30.000</p>
-                    <a href="#">Comprar</a>
-                </div>
-                <div class="product">
-                    <img src="img/camiseta.png" alt="Camiseta">
-                    <h2>Camiseta azul</h2>
-                    <p>$30.000</p>
-                    <a href="#">Comprar</a>
-                </div>
-    
-            </div>
+            </main>
         </div>
         
         <!-- Footer -->
