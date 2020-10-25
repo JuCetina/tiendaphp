@@ -13,7 +13,7 @@
         <!-- Cabecera -->
         <header class="header">
             <div class="logo">
-                <a href="index.php">
+                <a href="<?=base_url?>">
                     <img src="<?=base_url?>assets/img/camiseta.png" alt="Camiseta">
                     <h1>Tienda de camisetas</h1>
                 </a>

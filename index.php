@@ -2,7 +2,10 @@
 
 require_once 'autoload.php';
 
+require_once 'config/conection.php';
+
 require_once 'config/parameters.php';
+require_once 'helpers/utils.php';
 
 require_once 'views/layout/header.php';
 require_once 'views/layout/sidebar.php';

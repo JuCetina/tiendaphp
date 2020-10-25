@@ -7,3 +7,5 @@ class Conexion{
         return $db;
     }
 }
+
+session_start();

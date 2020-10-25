@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:  url('../fonts/icomoon.eot?jih01i');
-    src:  url('../fonts/icomoon.eot?jih01i#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?jih01i') format('truetype'),
-      url('../fonts/icomoon.woff?jih01i') format('woff'),
-      url('../fonts/icomoon.svg?jih01i#icomoon') format('svg');
+    src:  url('../fonts/icomoon.eot?pqior9');
+    src:  url('../fonts/icomoon.eot?pqior9#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?pqior9') format('truetype'),
+      url('../fonts/icomoon.woff?pqior9') format('woff'),
+      url('../fonts/icomoon.svg?pqior9#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -25,14 +25,20 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  .icon-pencil2:before {
-    content: "\e906";
-  }
-  .icon-drawer2:before {
-    content: "\e95d";
+  .icon-stack:before {
+    content: "\e92e";
   }
   .icon-box-add:before {
     content: "\e95e";
+  }
+  .icon-gift:before {
+    content: "\e99f";
+  }
+  .icon-truck:before {
+    content: "\e9b0";
+  }
+  .icon-exit:before {
+    content: "\ea14";
   }
 
   
@@ -62,6 +68,26 @@ a{
 
 a:hover{
     color: #555;
+}
+
+.alerta{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 14px;
+    box-shadow: 0 1px 3px #ccc;
+    border-radius: 5px;
+}
+
+.alerta-exito{
+    color: green;
+    background: #cfeecf;
+    border: 1px solid green;
+}
+
+.alerta-error{
+    color: #d41e1e;
+    background: #f5c2c2;
+    border: 1px solid #d41e1e;;
 }
 
 
