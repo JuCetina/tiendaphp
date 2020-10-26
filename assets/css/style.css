@@ -90,6 +90,24 @@ a:hover{
     border: 1px solid #d41e1e;;
 }
 
+table{
+    border: 1px solid #555;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+caption{
+    padding: 10px;
+    font-weight: 700;
+}
+
+td{
+    border-top: 1px solid #ccc;
+    padding: 5px;
+}
+
 
 /* Header */
 
@@ -242,6 +260,9 @@ input[type=submit]{
     font-size: 14px;
 }
 
+#login p{
+    margin: 8px 0;
+}
 
 /* Contenido principal */
 
@@ -306,14 +327,14 @@ footer{
 }
 
 
-/* Registro */
+/* Registro y Gestion de Categorías*/
 
-.registro form{
+main form{
     padding: 15px;
     text-align: center;
 }
 
-.registro label{
+main label{
     display: block;
 }
 
@@ -333,3 +354,24 @@ footer{
     font-size: 30px;
     font-family: 'Open Sans', sans-serif;
 }
+
+/* Gestión de Categorias */
+
+main .botones-contenedor a{
+    width: 100px;
+    border: 0;
+    display: inline-block;
+    margin: 20px 5px;
+}
+
+.botones-contenedor{
+    text-align: center;
+}
+
+.boton-crear{
+    background: green;
+}
+
+
+
+

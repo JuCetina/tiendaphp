@@ -19,6 +19,7 @@
                         <input type="password" name="password">
                         <input type="submit" value="Entrar">
                     </form>
+                    <p>Si no tienes cuenta <a href="<?=base_url?>usuario/registro">regístrate aquí</a></p>
                 </div>
 
                 <?php else: ?>
@@ -32,7 +33,7 @@
                 <ul>
 
                     <?php if(isset($_SESSION['admin'])): ?>
-                    <a href="#">
+                    <a href="<?=base_url?>categoria/principal">
                         <li><i class="icon-stack"></i> Gestionar categorías</li>
                     </a>
                     

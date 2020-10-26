@@ -69,6 +69,7 @@ class Usuario{
         $sql = "INSERT into usuarios VALUES(null, '{$this->nombres}', '{$this->apellidos}', '{$this->email}', '{$this->password}', '{$this->rol}', null)";
         $guardar = $this->db->query($sql);
         $result = false;
+        
         if($guardar){
             $result = true;
         }

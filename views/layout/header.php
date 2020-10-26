@@ -24,31 +24,22 @@
         <nav class="menu">
             <ul>
                 
-                <a href="index.php">
+                <a href="<?=base_url?>">
                     <li>
                         Inicio
                     </li>
                 </a>
-                <a href="index.php">
-                    <li>
-                        Categoría 1
-                    </li>
-                </a>
-                <a href="index.php">
-                    <li>
-                        Categoría 2
-                    </li>
-                </a>
-                <a href="index.php">
-                    <li>
-                        Categoría 3
-                    </li>
-                </a>
-                <a href="index.php">
-                    <li>
-                        Categoría 4
-                    </li>
-                </a>
+
+                <?php $categorias = Utils::mostrarCategorias(); 
+                 if(!empty($categorias)): ?>
+                    <?php  while($cat = $categorias->fetch_object()): ?>
+                        <a href="#">
+                            <li>
+                                <?=$cat->nombre?>
+                            </li>
+                        </a>
+                    <?php endwhile; ?>
+                <?php endif; ?>
 
             </ul>
         </nav>
