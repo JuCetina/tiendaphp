@@ -37,7 +37,7 @@
                         <li><i class="icon-stack"></i> Gestionar categorías</li>
                     </a>
                     
-                    <a href="#">
+                    <a href="<?=base_url?>producto/gestion">
                         <li><i class="icon-box-add"></i> Gestionar productos</li>
                     </a>
 

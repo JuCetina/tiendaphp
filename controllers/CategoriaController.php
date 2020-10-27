@@ -111,7 +111,6 @@ class CategoriaController{
             header("Location:".base_url."categoria/editar&id=".$id);
 
         }else{
-            $_SESSION['categoria_actualizada'] = 'failed';
             header("Location:".base_url."categoria/principal");
         }
     }
@@ -133,9 +132,6 @@ class CategoriaController{
             }else{
                 $_SESSION['categoria_eliminada'] = 'failed';
             }
-
-        }else{
-            $_SESSION['categoria_eliminada'] = 'failed';
         }
         
         header("Location:".base_url."categoria/principal");

@@ -40,9 +40,9 @@ CREATE TABLE productos(
     descripcion     varchar(200) not null,
     precio          float(100,2) not null,
     stock           int(30) not null,
-    oferta          varchar(2) not null,
+    oferta          varchar(2) null,
     fecha           date not null,
-    imagen          varchar(255) not null,
+    imagen          varchar(255) null,
     CONSTRAINT pk_productos PRIMARY KEY(id),
     CONSTRAINT fk_productos_categorias FOREIGN KEY(categoria_id) REFERENCES categorias(id)
 )ENGINE=InnoDB;
