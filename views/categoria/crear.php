@@ -2,7 +2,7 @@
    
     <?php if(isset($editar) && isset($cat_consultada) && is_object($cat_consultada)): ?>
         <h3>Editar Categoría <?=$cat_consultada->nombre?></h3>
-        <?php $url_action = base_url."categoria/guardar_editada&id=".$cat_consultada->id ?>
+        <?php $url_action = base_url."categoria/guardar&id=".$cat_consultada->id ?>
     <?php else: ?>
         <h3>Crear Categoría</h3>
         <?php $url_action = base_url."categoria/guardar" ?>

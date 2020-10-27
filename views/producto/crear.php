@@ -2,7 +2,7 @@
    
     <?php if(isset($editar) && isset($pro_consultado) && is_object($pro_consultado)): ?>
         <h3>Editar Producto <?=$pro_consultado->nombre?></h3>
-        <?php $url_action = base_url."producto/guardar_editado&id=".$pro_consultado->id ?>
+        <?php $url_action = base_url."producto/guardar&id=".$pro_consultado->id ?>
     <?php else: ?>
         <h3>Crear Producto</h3>
         <?php $url_action = base_url."producto/guardar" ?>
