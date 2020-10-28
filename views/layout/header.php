@@ -33,7 +33,7 @@
                 <?php $categorias = Utils::mostrarCategorias(); 
                  if(!empty($categorias)): ?>
                     <?php  while($cat = $categorias->fetch_object()): ?>
-                        <a href="#">
+                        <a href="<?=base_url."categoria/ver&id=".$cat->id?>">
                             <li>
                                 <?=$cat->nombre?>
                             </li>

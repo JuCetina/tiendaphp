@@ -151,4 +151,28 @@ class Producto{
         return $result;
     }
 
+    public function getRandom($limit){
+        $sql = "SELECT *, FORMAT(precio, 2) AS 'precio_formateado' from productos ORDER BY RAND() limit $limit";
+        $consulta = $this->db->query($sql);
+        $result = false;
+
+        if($consulta && $consulta->num_rows >= 1){
+            $result = $consulta;
+        }
+
+        return $result;
+    }
+
+    public function getAllByCategory(){
+        $sql = "SELECT *, FORMAT(precio, 2) AS 'precio_formateado' from productos where categoria_id = {$this->categoria_id}";
+        $consulta = $this->db->query($sql);
+        $result = false;
+
+        if($consulta && $consulta->num_rows >= 1){
+            $result = $consulta;
+        }
+
+        return $result;
+    }
+
 }

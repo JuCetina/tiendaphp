@@ -1,7 +1,8 @@
  
             <!-- Contenido principal -->
             <main>
-                <h3>Algunos de nuestros productos</h3>
+            <?php if(!empty($cat)): ?>
+                <h3><?=$cat->nombre?></h3>
                 <hr>
                 <div class="products">
 
@@ -19,11 +20,14 @@
                         </div>
                     <?php endwhile; ?>
                 <?php else: ?>
-                    <p>No existen productos destacados para mostrar</p>
+                    <p>No existen productos para mostrar en esta categoría</p>
                 <?php endif; ?>
-                     
-                                        
+                                                             
                 </div>
-    
+            <?php else: ?>
+                <h3>No existe la categoría</h3>
+                <hr>
+            <?php endif; ?>
+
             </main>
 
