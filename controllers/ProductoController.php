@@ -181,4 +181,19 @@ class ProductoController{
 
         header("Location:".base_url."producto/gestion"); 
     }
+
+    public function ver(){
+        if(isset($_GET['id'])){
+
+            $id = $_GET['id'];
+
+            $pro = new Producto();
+            $pro->setId($id);
+            $producto = $pro->getOne();
+            
+            require_once 'views/producto/ver.php';
+        }else{
+            header("Location:".base_url);
+        }
+    }
 }

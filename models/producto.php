@@ -116,7 +116,7 @@ class Producto{
     }
 
     public function getOne(){
-        $sql = "SELECT * from productos where id = {$this->id}";
+        $sql = "SELECT *, FORMAT(precio, 2) AS 'precio_formateado' from productos where id = {$this->id}";
         $consultado = $this->db->query($sql);
         $result = false;
 

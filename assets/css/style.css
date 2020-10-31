@@ -316,10 +316,10 @@ hr{
     margin-bottom: 8px;
 }
 
-.product a{
+.product a, .product-detail a{
     background: #28b346;
     border-color: #2f9445;
-    width: 70px;
+    width: 60px;
 }
 
 
@@ -386,6 +386,37 @@ main .botones-contenedor a{
     display: block;
     margin: 5px auto;
 }
+
+
+/* Detalle del producto */
+
+.product-detail{
+    width: 90%;
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.product-detail .img{
+    width: 60%;
+}
+
+.product-detail img{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.product-detail .detail{
+    width: 40%;
+    padding-left: 5px;
+}
+
+.product-detail p{
+    margin: 5px 0;
+}
+
 
 
 
