@@ -98,6 +98,7 @@ class UsuarioController{
         Utils::deleteSession('admin');
         Utils::deleteSession('logueado');
         header("Location:".base_url);
+        ob_end_flush();
     }
 
 }
