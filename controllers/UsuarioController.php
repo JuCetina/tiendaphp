@@ -3,9 +3,6 @@
 require_once 'models/usuario.php';
 
 class UsuarioController{
-    public function index(){
-        echo 'Controlador UsuarioController, método index.';
-    }
 
     public function registro(){
         require_once 'views/usuario/registro.php';
@@ -98,9 +95,8 @@ class UsuarioController{
     }
 
     public function logout(){
-        Utils::deleteSession('logueado');
         Utils::deleteSession('admin');
-
+        Utils::deleteSession('logueado');
         header("Location:".base_url);
     }
 

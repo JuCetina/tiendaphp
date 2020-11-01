@@ -20,7 +20,7 @@
                         <p>Precio: $<?=$producto->precio_formateado?></p>
                         <p>Oferta: <?=$producto->oferta?></p>
                         <p>Stock: <?=$producto->stock?></p>
-                        <a class="button" href="<?=base_url?>producto/comprar&id=<?=$producto->id?>">Comprar</a>
+                        <a class="button" href="<?=base_url?>carrito/add&id=<?=$producto->id?>">Añadir al carrito</a>
                         </div>
                     </div>
                                                      

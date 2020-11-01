@@ -108,6 +108,10 @@ td{
     padding: 5px;
 }
 
+tfoot{
+    font-weight: 700;
+}
+
 
 /* Header */
 
@@ -316,10 +320,11 @@ hr{
     margin-bottom: 8px;
 }
 
-.product a, .product-detail a{
+.product a, .product-detail a, .pedido{
     background: #28b346;
     border-color: #2f9445;
-    width: 60px;
+    width: 113px;
+    text-align: center;
 }
 
 
@@ -417,6 +422,15 @@ main .botones-contenedor a{
     margin: 5px 0;
 }
 
+/* Carrito de compras */
+
+.principal_carrito img{
+    height: 80px;
+}
+
+.pedido{
+    margin-bottom: 10px;
+}
 
 
 
