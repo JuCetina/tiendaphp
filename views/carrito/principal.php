@@ -23,7 +23,7 @@
                 <?php endif; ?>
                     <td><a href="<?=base_url."producto/ver&id=".$elemento['producto']->id?>"><?=$elemento['producto']->nombre?></a></td>
                     <td><?=$elemento['unidades']?></td>
-                    <td><?=$elemento['producto']->precio_formateado?></td>
+                    <td>$<?=$elemento['producto']->precio_formateado?></td>
                 </tr>    
             <?php endforeach; ?>
         <?php endif; ?>
@@ -36,10 +36,10 @@
                 <?php foreach($_SESSION['carrito'] as $indice => $elemento): 
                     $total += $elemento['producto']->precio * $elemento['unidades']?>
                 <?php endforeach; ?>
-                <td><?=number_format($total, 2)?></td>
+                <td>$<?=number_format($total, 2)?></td>
             <?php endif; ?>
             </tr>
         </tfoot>
     </table>
-    <a class="button pedido" href="">Comprar</a>
+    <a class="button pedido" href="<?=base_url?>pedido/comprar">Comprar</a>
 </main>

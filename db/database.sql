@@ -48,10 +48,10 @@ CREATE TABLE productos(
 )ENGINE=InnoDB;
 
 CREATE TABLE pedidos_productos(
-    id              int(20) not null,
-    pedido_id       int(20) not null,
-    producto_id     int(20) not null,
-    unidades        int(100) not null,
+    id              int(255) auto_increment not null,
+    pedido_id       int(255) not null,
+    producto_id     int(255) not null,
+    unidades        int(255) not null,
     CONSTRAINT pk_pedidos_productos PRIMARY KEY(id),
     CONSTRAINT fk_pedidos_productos_pedidos FOREIGN KEY(pedido_id) REFERENCES pedidos(id),
     CONSTRAINT fk_pedidos_productos_productos FOREIGN KEY(producto_id) REFERENCES productos(id)

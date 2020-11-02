@@ -46,7 +46,7 @@
                             <li><i class="icon-truck"></i> Gestionar pedidos</li>
                         </a>
                     <?php endif; ?>
-                        <a href="#">
+                        <a href="<?=base_url?>pedido/mis_pedidos">
                             <li><i class="icon-gift"></i> Mis pedidos</li>
                         </a>
                         <a href="<?=base_url?>usuario/logout">

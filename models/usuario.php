@@ -66,7 +66,7 @@ class Usuario{
 
     public function almacenar(){
         $this->password = password_hash($this->password, PASSWORD_BCRYPT, ['cost' => 4]);
-        $sql = "INSERT into usuarios VALUES(null, '{$this->nombres}', '{$this->apellidos}', '{$this->email}', '{$this->password}', '{$this->rol}', null)";
+        $sql = "INSERT into usuarios VALUES(null, '{$this->nombres}', '{$this->apellidos}', '{$this->email}', '{$this->password}', '{$this->rol}', '{$this->imagen}')";
         $guardar = $this->db->query($sql);
         $result = false;
         

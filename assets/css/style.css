@@ -424,7 +424,7 @@ main .botones-contenedor a{
 
 /* Carrito de compras */
 
-.principal_carrito img{
+.principal_carrito img, .detalle_pedido img{
     height: 80px;
 }
 
@@ -432,6 +432,14 @@ main .botones-contenedor a{
     margin-bottom: 10px;
 }
 
+.confirmado p, .detalle_pedido p{
+    text-align: center;
+    margin: 5px;
+}
 
+.confirmado span, .detalle_pedido span{
+    font-style: italic;
+    font-weight: 700;
+}
 
 
