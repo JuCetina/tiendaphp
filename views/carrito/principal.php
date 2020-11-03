@@ -10,6 +10,7 @@
                 <th>Nombre</th>
                 <th>Unidades</th>
                 <th>Precio Unitario</th>
+                <th>Acción</th>
             </tr>
         </thead>
         <tbody>
@@ -22,8 +23,13 @@
                     <td><img src="<?=base_url.'uploads/images/'.$elemento['producto']->imagen;?>" alt="Foto del producto: <?=$elemento['producto']->nombre?>"></td>
                 <?php endif; ?>
                     <td><a href="<?=base_url."producto/ver&id=".$elemento['producto']->id?>"><?=$elemento['producto']->nombre?></a></td>
-                    <td><?=$elemento['unidades']?></td>
+                    <td>
+                        <a class="control" href="<?=base_url?>carrito/restar&indice=<?=$indice?>">-</a>
+                        <?=$elemento['unidades']?>
+                        <a class="control" href="<?=base_url?>carrito/agregar&indice=<?=$indice?>">+</a>
+                    </td>
                     <td>$<?=$elemento['producto']->precio_formateado?></td>
+                    <td><a href="<?=base_url?>carrito/remover&indice=<?=$indice?>">Quitar producto</a></td>
                 </tr>    
             <?php endforeach; ?>
         <?php endif; ?>
@@ -41,5 +47,8 @@
             </tr>
         </tfoot>
     </table>
-    <a class="button pedido" href="<?=base_url?>pedido/comprar">Comprar</a>
+    <?php if(!empty($_SESSION['carrito'])): ?>
+        <a class="button pedido" href="<?=base_url?>pedido/comprar">Comprar</a>
+        <a class="button red pedido" href="<?=base_url?>carrito/delete">Vaciar el carrito</a>
+    <?php endif; ?>
 </main>

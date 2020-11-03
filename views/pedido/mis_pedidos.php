@@ -1,6 +1,19 @@
 <main class="mis_pedidos">
-    <h3>Mis pedidos</h3>
+    <?php if(!isset($gestion)): ?>
+        <h3>Mis pedidos</h3>
+    <?php else:?>
+        <h3>Gestión de pedidos</h3>
+    <?php endif; ?>
     <hr>
+
+    <?php if(isset($_SESSION['estado'])): 
+        if($_SESSION['estado'] == 'completed'): ?>
+            <h3 class="alerta alerta-exito">Estado actualizado con éxito</h3>
+        <?php else: ?>
+            <h3 class="alerta alerta-error">Ocurrió un error, no fue posible actualizar el estado del pedido</h3>
+        <?php endif; ?>
+    <?php endif; 
+        Utils::deleteSession('estado'); ?>
 
     <table>
         <caption>Listado de Pedidos</caption>

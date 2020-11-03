@@ -15,7 +15,8 @@
         <tbody>
         <?php if(!empty($ped)): 
             $total = 0;?>
-            <?php while($pedido = $ped->fetch_object()): ?>
+            <?php while($pedido = $ped->fetch_object()): 
+                $pedido_id = $pedido->id?>
                 <tr>
                 <?php if($pedido->imagen == null): ?>
                     <td><img src="<?=base_url.'assets/img/camiseta.png'?>" alt="Foto del producto: <?=$pedido->nombre?>"></td>
@@ -39,5 +40,16 @@
             </tr>
         </tfoot>
     </table>
+
+    <?php if(isset($_SESSION['admin'])): ?>
+        <h3>Cambiar estado del pedido</h3>
+        <form action="<?=base_url?>pedido/estado&id=<?=$pedido_id?>" method="POST">
+            <select name="estado">
+                <option value="En preparación">En preparación</option>
+                <option value="Enviado">Enviado</option>
+            </select>
+            <input type="submit" value="Enviar">
+        </form>
+    <?php endif; ?>
 
 </main>

@@ -196,4 +196,16 @@ class Pedido{
 
         return $result;
     }
+
+    public function actualizarEstado(){
+        $sql = "UPDATE pedidos SET estado = '{$this->estado}' WHERE id = {$this->id}";
+        $actualizado = $this->db->query($sql);
+        $result = false;
+
+        if($actualizado){
+            $result = true;
+        }
+
+        return $result;
+    }
 }

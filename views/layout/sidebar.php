@@ -42,7 +42,7 @@
                         <a href="<?=base_url?>producto/gestion">
                             <li><i class="icon-box-add"></i> Gestionar productos</li>
                         </a>
-                        <a href="#">
+                        <a href="<?=base_url?>pedido/gestion">
                             <li><i class="icon-truck"></i> Gestionar pedidos</li>
                         </a>
                     <?php endif; ?>

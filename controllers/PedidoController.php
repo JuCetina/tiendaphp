@@ -55,6 +55,7 @@ class PedidoController{
                     }else{
                         $_SESSION['pedido'] = 'failed';
                     }
+
                     header("Location:".base_url."pedido/confirmado");
                 }else{
                     $_SESSION['pedido'] = 'failed';
@@ -66,6 +67,7 @@ class PedidoController{
         }else{
             header("Location:".base_url);
         }
+        
     }
 
     public function confirmado(){
@@ -108,5 +110,56 @@ class PedidoController{
         }else{
             header("Location:".base_url);
         }
+    }
+
+    public function gestion(){
+        Utils::isAdmin();
+
+        $gestion = true;
+
+        $pedido = new Pedido();
+        $pedidos = $pedido->getAll();
+
+        require_once 'views/pedido/mis_pedidos.php';
+    }
+
+    public function estado(){
+        Utils::isAdmin();
+
+        if(isset($_GET['id'])){
+
+            $pedido_id = $_GET['id'];
+        
+            if(isset($_POST)){
+
+                if(isset($_POST['estado'])){
+                    $estado = filter_var(trim($_POST['estado']), FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);                
+                }
+    
+                $errores_datos = false;
+    
+                if(empty($estado) || is_numeric($estado) || preg_match("/[0-9]/", $estado) || ($estado != "En preparación" &&  $estado != "Enviado")){
+                    $errores_datos = true;
+                }
+    
+                if(!$errores_datos){
+                    $pedido = new Pedido();
+                    $pedido->setId($pedido_id);
+                    $pedido->setEstado($estado);
+                    $actualizado = $pedido->actualizarEstado();
+    
+                    if($actualizado){
+                        $_SESSION['estado'] = 'completed';
+                    }else{
+                        $_SESSION['estado'] = 'failed';
+                    }
+                }else{
+                    $_SESSION['estado'] = 'failed';
+                }
+            }        
+        }
+            
+        header("Location:".base_url."pedido/gestion");
+           
     }
 }
