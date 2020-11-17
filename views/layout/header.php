@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=base_url?>assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Roboto&display=swap" rel="stylesheet">
-    <title>Tienda de camisetas</title>
+    <title>Tienda de muchas cosas</title>
 </head>
 <body>
     <div class="container">
@@ -15,7 +15,7 @@
             <div class="logo">
                 <a href="<?=base_url?>">
                     <img src="<?=base_url?>assets/img/camiseta.png" alt="Camiseta">
-                    <h1>Tienda de camisetas</h1>
+                    <h1>Tienda de muchas cosas</h1>
                 </a>
             </div>
         </header>
