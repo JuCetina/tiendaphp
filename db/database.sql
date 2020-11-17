@@ -6,7 +6,7 @@ CREATE TABLE usuarios(
     nombres     varchar(100) not null,
     apellidos   varchar(100) not null,
     email       varchar(50) not null,
-    password    varchar(50) not null,
+    password    varchar(255) not null,
     rol         varchar(15) not null,
     imagen      varchar(255) null,
     CONSTRAINT pk_usuarios PRIMARY KEY(id),
